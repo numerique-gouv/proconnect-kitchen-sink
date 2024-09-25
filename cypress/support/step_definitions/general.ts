@@ -12,8 +12,8 @@ When("je clique sur {string}", function (text: string) {
   cy.contains(text).click();
 });
 
-When("je remplis le formulaire de connexion", function (string: string) {
-  return "pending";
+When("je remplis le formulaire de connexion", function () {
+  cy.get("input").click();
 });
 
 Then("je vois {string}", function (text: string) {

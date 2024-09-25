@@ -1,72 +1,20 @@
 <html>
-  <title>OAuth Authorization Code + PKCE in Vanilla JS</title>
+  <title>SPA PKCE ProConnect</title>
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1, user-scalable=no"
   />
+  <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
 
-  <script>
-    // Configure your application and authorization server details
-    var config = {
-      client_id: "",
-      redirect_uri: "http://localhost:8080/",
-      authorization_endpoint: "",
-      token_endpoint: "",
-      requested_scopes: "",
-    };
-  </script>
-
-  <div class="flex-center full-height">
-    <div class="content">
-      <a href="#" id="start">Cliquez pour vous connecter</a>
-      <div id="token" class="hidden">
-        <h2>Access Token</h2>
-        <div id="access_token" class="code"></div>
-      </div>
-      <div id="error" class="hidden">
-        <h2>Error</h2>
-        <div id="error_details" class="code"></div>
-      </div>
-    </div>
-  </div>
+  <main>
+    <header>
+      <h1>SPA PKCE ProConnect</h1>
+      <p>Cette application utilise OAuth Authorization Code + PKCE.</p>
+      <p>
+        <a href="#" id="login"><b>Cliquez pour vous connecter</b></a>
+      </p>
+    </header>
+  </main>
 
   <script type="module" src="/src/main.ts"></script>
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-      min-height: 100vh;
-      font-family: arial, sans-serif;
-    }
-    @media (max-width: 400px) {
-      body {
-        padding: 10px;
-      }
-    }
-    .full-height {
-      min-height: 100vh;
-    }
-    .flex-center {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-    }
-    .content {
-      max-width: 400px;
-    }
-    h2 {
-      text-align: center;
-    }
-    .code {
-      font-family: "Courier New", "Courier", monospace;
-      width: 100%;
-      padding: 4px;
-      border: 1px #ccc solid;
-      border-radius: 4px;
-      word-break: break-all;
-    }
-    .hidden {
-      display: none;
-    }
-  </style>
 </html>
