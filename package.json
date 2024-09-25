@@ -1,0 +1,33 @@
+{
+  "name": "proconnect-kitchen-sink",
+  "private": true,
+  "type": "module",
+  "module": "index.ts",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "bun run --filter=* build",
+    "start": "bun run scripts/start.ts",
+    "studio": "cypress open -b electron --e2e",
+    "test": "cypress run -e filterSpecs=true"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-organize-imports"
+    ]
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "20.1.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "2.2.3",
+    "@tsconfig/bun": "1.0.7",
+    "@types/bun": "1.1.10",
+    "cypress": "13.14.2",
+    "prettier": "3.3.3",
+    "prettier-plugin-organize-imports": "4.1.0",
+    "typescript": "5.6.2"
+  },
+  "trustedDependencies": [
+    "cypress"
+  ]
+}

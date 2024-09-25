@@ -1,0 +1,61 @@
+#
+
+name: E2E
+
+# Automatically cancel in-progress actions on the same branch
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request_target' && github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+
+      - uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6 #v4.0.4
+        with:
+          node-version: "node"
+
+      - name: 🌭 Install bun
+        uses: oven-sh/setup-bun@4bc047ad259df6fc24a6c9b0f9a0cb08cf17fbe5 # v2
+
+      - run: bun install --frozen-lockfile
+
+      - name: cypress-io/github-action needs package-lock.json
+        run: |
+          touch package-lock.json
+
+      - name: Cypress run
+        uses: cypress-io/github-action@0da3c06ed8217b912deea9d8ee69630baed1737e # v6.7.6
+        with:
+          build: bun run build
+          install-command: bun install --frozen-lockfile
+          spec: apps/${{ matrix.e2e_test }}/features
+          start: bun run start
+
+      - uses: actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874 # v4.4.0
+        if: failure()
+        with:
+          compression-level: 9
+          name: cypress-${{ matrix.e2e_test }}-screenshots
+          path: e2e/cypress/screenshots
+          spec: features/${{ matrix.e2e_test }}
+
+      - uses: actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874 # v4.4.0
+        if: failure()
+        with:
+          compression-level: 9
+          name: cypress-${{ matrix.e2e_test }}-videos
+          path: e2e/cypress/videos
+
+    strategy:
+      matrix:
+        e2e_test:
+          - spa_pkce_proconnect
