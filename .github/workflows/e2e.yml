@@ -10,7 +10,10 @@ concurrency:
 on:
   push:
   workflow_dispatch:
-
+  workflow_run:
+    workflows: ["♻️ Dependabot: Update bun.lockb"]
+    types:
+      - completed
 jobs:
   e2e:
     runs-on: ubuntu-latest
