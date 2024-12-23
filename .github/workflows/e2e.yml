@@ -43,7 +43,7 @@ jobs:
           spec: apps/${{ matrix.e2e_test }}/features
           start: bun run start
 
-      - uses: actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874 # v4.4.0
+      - uses: actions/upload-artifact@6f51ac03b9356f520e9adb1b1b7802705f340c2b # v4.5.0
         if: failure()
         with:
           compression-level: 9
@@ -51,7 +51,7 @@ jobs:
           path: e2e/cypress/screenshots
           spec: features/${{ matrix.e2e_test }}
 
-      - uses: actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874 # v4.4.0
+      - uses: actions/upload-artifact@6f51ac03b9356f520e9adb1b1b7802705f340c2b # v4.5.0
         if: failure()
         with:
           compression-level: 9
