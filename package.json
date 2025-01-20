@@ -21,7 +21,7 @@
     "@badeball/cypress-cucumber-preprocessor": "21.0.3",
     "@bahmutov/cypress-esbuild-preprocessor": "2.2.4",
     "@tsconfig/bun": "1.0.7",
-    "@types/bun": "1.1.16",
+    "@types/bun": "1.1.17",
     "cypress": "13.17.0",
     "prettier": "3.4.2",
     "prettier-plugin-organize-imports": "4.1.0",
