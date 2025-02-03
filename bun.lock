@@ -1,12 +1,12 @@
 {
-  "lockfileVersion": 0,
+  "lockfileVersion": 1,
   "workspaces": {
     "": {
       "devDependencies": {
         "@badeball/cypress-cucumber-preprocessor": "22.0.0",
         "@bahmutov/cypress-esbuild-preprocessor": "2.2.4",
         "@tsconfig/bun": "1.0.7",
-        "@types/bun": "1.1.17",
+        "@types/bun": "1.2.2",
         "cypress": "14.0.0",
         "prettier": "3.4.2",
         "prettier-plugin-organize-imports": "4.1.0",
@@ -215,7 +215,7 @@
 
     "@tsconfig/bun": ["@tsconfig/bun@1.0.7", "", {}, "sha512-udGrGJBNQdXGVulehc1aWT73wkR9wdaGBtB6yL70RJsqwW/yJhIg6ZbRlPOfIUiFNrnBuYLBi9CSmMKfDC7dvA=="],
 
-    "@types/bun": ["@types/bun@1.1.17", "", { "dependencies": { "bun-types": "1.1.44" } }, "sha512-zZt0Kao/8hAwNOXh4bmt8nKbMEd4QD8n7PeTGF+NZTVY5ouXhU/TX7jUj4He1p7mgY+WdplnU1B6MB1j17vdzg=="],
+    "@types/bun": ["@types/bun@1.2.2", "", { "dependencies": { "bun-types": "1.2.2" } }, "sha512-tr74gdku+AEDN5ergNiBnplr7hpDp3V1h7fqI2GcR/rsUaM39jpSeKH0TFibRvU0KwniRx5POgaYnaXbk0hU+w=="],
 
     "@types/estree": ["@types/estree@1.0.6", "", {}, "sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw=="],
 
@@ -327,7 +327,7 @@
 
     "buffer-from": ["buffer-from@1.1.2", "", {}, "sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ=="],
 
-    "bun-types": ["bun-types@1.1.44", "", { "dependencies": { "@types/node": "~20.12.8", "@types/ws": "~8.5.10" } }, "sha512-jtcekoZeSINgEcHSISzhR13w/cyE+Fankw2Cpl4c0fN3lRmKVAX0i9ay4FyK4lOxUK1HG4HkuIlrPvXKz4Y7sw=="],
+    "bun-types": ["bun-types@1.2.2", "", { "dependencies": { "@types/node": "*", "@types/ws": "~8.5.10" } }, "sha512-RCbMH5elr9gjgDGDhkTTugA21XtJAy/9jkKe/G3WR2q17VPGhcquf9Sir6uay9iW+7P/BV0CAHA1XlHXMAVKHg=="],
 
     "cachedir": ["cachedir@2.4.0", "", {}, "sha512-9EtFOZR8g22CL7BWjJ9BUx1+A/djkofnyW3aOXZORNW2kxoUpx2h+uN2cOqwPmFhnpVmxg+KW2OjOSgChTEvsQ=="],
 
@@ -963,7 +963,7 @@
 
     "source-map-support": ["source-map-support@0.5.21", "", { "dependencies": { "buffer-from": "^1.0.0", "source-map": "^0.6.0" } }, "sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w=="],
 
-    "spa_pkce_proconnect": ["spa_pkce_proconnect@workspace:apps/spa_pkce_proconnect", { "devDependencies": { "oauth4webapi": "3.1.4", "vite": "6.0.11" } }],
+    "spa_pkce_proconnect": ["spa_pkce_proconnect@workspace:apps/spa_pkce_proconnect"],
 
     "spdx-correct": ["spdx-correct@3.2.0", "", { "dependencies": { "spdx-expression-parse": "^3.0.0", "spdx-license-ids": "^3.0.0" } }, "sha512-kN9dJbvnySHULIluDHy32WHRUu3Og7B9sbY7tsFLctQkIqnMh3hErYgdMjTYuqmcXX+lK5T1lnUt3G7zNswmZA=="],
 
