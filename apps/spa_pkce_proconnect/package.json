@@ -2,7 +2,7 @@
   "name": "spa_pkce_proconnect",
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "build": "vite build --target=esnext",
     "dev": "vite",
     "preview": "vite preview"
   },
