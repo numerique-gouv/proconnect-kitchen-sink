@@ -1,7 +1,7 @@
 #language: fr
 Fonctionnalité: Spa PKCE Test
 
-  @ignore
+  @skip
   Scénario: Connexion avec succès
     Soit la page de démarrage
     * je clique sur "SPA PKCE"
