@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "22.1.0",
-    "@bahmutov/cypress-esbuild-preprocessor": "2.2.4",
+    "@bahmutov/cypress-esbuild-preprocessor": "2.2.5",
     "@tsconfig/bun": "1.0.8",
     "@types/bun": "1.2.16",
     "cypress": "14.4.1",
