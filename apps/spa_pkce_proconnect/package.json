@@ -7,7 +7,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "oauth4webapi": "3.5.2",
+    "oauth4webapi": "3.5.3",
     "vite": "6.3.5"
   }
 }
