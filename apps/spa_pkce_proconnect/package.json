@@ -8,6 +8,6 @@
   },
   "devDependencies": {
     "oauth4webapi": "3.5.5",
-    "vite": "7.1.2"
+    "vite": "7.1.3"
   }
 }
